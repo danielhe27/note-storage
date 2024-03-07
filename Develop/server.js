@@ -10,8 +10,8 @@ app.use (express.urlencoded({ extended: true }));
 
 app.use(express.json());
 
-require('../Develop/api/notes')(app);
-require('../Develop/api/htmlRoutes')(app);
+require('../Develop/routes/apiRoutes')(app);
+require('../Develop/routes/htmlRoutes')(app);
 
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
